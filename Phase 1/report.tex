@@ -7,6 +7,7 @@
 \usepackage{fancyhdr}
 \usepackage{xepersian}
 \usepackage{fontspec}
+\usepackage{url}
 \settextfont{B Nazanin}
 \setlatintextfont{Times New Roman}
 
@@ -51,6 +52,45 @@
 \chead{پروژه مقدمه‌ای بر بیوانفورماتیک}
 %pages header
 
-سلام لاتک
+\section{}
+ریزآرایه \LTRfootnote{\lr{microarray}}، ابزاری آزمایشگاهی است که برای تشخیص بیان هزاران ژن به طور همزمان استفاده می‌شود. ریزآرایه‌های \lr{DNA} لام‌های میکروسکوپی هستند که با هزاران نقطه کوچک در موقعیت‌های مشخص چاپ می‌شوند و هر نقطه حاوی یک توالی \lr{DNA} یا ژن شناخته‌شده است.
+
+ \subsection*{روش کار}
+برای انجام تحلیل ریزآرایه، مولکول‌های \lr{mRNA} معمولاً از هر دو نمونه آزمایشی و نمونه مرجع جمع‌آوری می‌شوند. به عنوان مثال، نمونه مرجع را می‌توان از یک فرد سالم، و نمونه آزمایشی را می‌توان از یک فرد مبتلا به بیماری مانند سرطان جمع‌آوری کرد. سپس دو نمونه \lr{mRNA} به \lr{DNA} مکمل (\lr{cDNA}) تبدیل می‌شوند و هر نمونه با یک ترکیب فلورسنت \LTRfootnote{\lr{fluorescent}} با رنگ متفاوت برچسب‌گذاری می‌شود. مثلا، نمونه آزمایشی \lr{cDNA} ممکن است با رنگ فلورسنت قرمز برچسب‌گذاری شود، در حالی که \lr{cDNA} مرجع با رنگ فلورسنت سبز برچسب‌گذاری می‌شود.
+
+ سپس دو نمونه با هم مخلوط شده و اجازه داده می‌شود تا به لام ریزآرایه متصل شوند. فرآیندی که در آن مولکول‌های \lr{cDNA} به ترکیب‌های \lr{DNA} روی لام متصل می‌شوند، هیبریداسیون \LTRfootnote{\lr{hybridization}} نامیده می‌شود.
+پس از هیبریداسیون، ریزآرایه برای اندازه‌گیری میزان بیان هر ژن چاپ‌شده روی لام اسکن می‌شود. اگر بیان یک ژن خاص در نمونه آزمایشی بیشتر از نمونه مرجع باشد، نقطه مربوطه روی ریزآرایه قرمز به نظر می‌رسد.
+از طرفی، اگر بیان در نمونه آزمایشی کمتر از نمونه مرجع باشد، آن نقطه سبز به نظر می‌رسد. در نهایت، اگر میزان بیان در دو نمونه یکسان باشد، نقطه زرد خواهد بود. داده‌های جمع‌آوری‌شده از طریق ریزآرایه‌ها را می‌توان برای ایجاد پروفایل‌های بیان ژن، که تغییرات همزمان در بیان بسیاری از ژن‌ها در پاسخ به یک بیماری یا درمان خاص را نشان می‌دهد، استفاده کرد. \cite{nature-microarray}
+ 
+ \subsection*{فرمت داده‌‌های خروجی}
+مجموعه داده‌های ریزآرایه معمولاً بسیار بزرگ هستند و فرمت داده‌های خروجی به صورت یک فایل خام (\lr{Raw Matrix}) در قالب یک متن \lr{tab-seperated} حاوی داده‌های بیش از یک سنجش ترکیبی (ترکیب‌ها در سطر‌ و نتایج آزمایش‌ها در ستون) است.
+در تصویر \ref{fig:microarray} میزان بیان هر ژن به صورت \lr{heatmap} نمایش داده شده است.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.3\columnwidth]{figs/microarray.png}
+	\caption{میزان بیان ژن در ریزآرایه \cite{wiki-microarray}}
+	\label{fig:microarray}
+\end{figure}
+
+\section{}
+
+ 
+
+\newpage
+\begin{thebibliography}{99}
+	\begin{latin}
+		\bibitem{nature-microarray}
+		Nature Defenition Microarray (2014), Nature Education, \url{https://www.nature.com/scitable/definition/microarray-202}
+		
+		\bibitem{wiki-microarray}
+		Microarray Hitmap (2006), Wikipedia, \url{https://commons.wikimedia.org/wiki/File:Heatmap.png#/media/File:Heatmap.png}
+		
+%		\bibitem{lamport94}
+%		Leslie Lamport (1994) \emph{\LaTeX: a document preparation system}, Addison
+%		Wesley, Massachusetts, 2nd ed.
+	\end{latin}
+\end{thebibliography}
+
+
 
 \end{document}
