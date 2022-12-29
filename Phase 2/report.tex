@@ -6,6 +6,7 @@
 \usepackage[a4paper, total={6in, 8in}]{geometry}
 \usepackage{hyperref}
 \usepackage{fancyhdr}
+\usepackage{subcaption}
 \usepackage{xepersian}
 \usepackage{fontspec}
 \usepackage{url}
@@ -55,6 +56,7 @@
 %pages header
 
 \section{بیان ژن‌ها}
+\subsection{انتخاب تمام نمونه‌های سالم}
 در جدول \ref{tab:genes} ژن‌هایی که بیان آن‌ها به طرز معناداری بین گروه سالم و گروه بیماران متفاوت است را نمایش می‌دهیم
 \footnote{جدول کامل به همراه این گزارش ضمیمه شده است.}.
 
@@ -72,12 +74,12 @@
 			\end{tabular}
 		\end{center}
 	\end{latin}
-	\label{tab:genes}
 	\caption{5 ژنی که بیان آن‌ها به طرز معناداری بین گروه سالم و گروه بیماران متفاوت است.}
+	\label{tab:genes}
 \end{table}
 
 حالا ژن‌هایی که در بیماران از بقیه بیشتر بیان شده‌اند و همچنین ژن‌هایی که کمتر از بقیه بیان شده‌اند را در جدول \ref{tab:up-down} نمایش می‌دهیم
-\footnote{جدول کامل این بخش هم به همراه این گزارش ضمیمه شده است.}.
+\footnote{جدول کامل این بخش هم به همراه گزارش ضمیمه شده است.}.
 
 \begin{table}[h!]
 	\begin{latin}
@@ -93,8 +95,49 @@
 			\end{tabular}
 		\end{center}
 	\end{latin}
-	\label{tab:up-down}
 	\caption{5 ژنی که در بیماران بیشتر/کمتر از بقیه بیان شده‌اند.}
+	\label{tab:up-down}
+\end{table}
+
+\subsection{انتخاب نمونه‌های سالم با بیشترین هم‌بستگی}
+در جدول \ref{tab:genes-2} ژن‌هایی که بیان آن‌ها به طرز معناداری بین گروه سالم و گروه بیماران متفاوت است را نمایش می‌دهیم.
+
+\begin{table}[h!]
+	\begin{latin}
+		\begin{center}
+			\begin{tabular}{@{}cccc@{}}
+				\toprule
+				Gene Symbol & Gene ID & Adj. P-Val & logFC  \\ \midrule
+				MPO      & 4353  & 7.714e-16 & -5.73  \\
+				PECR     & 55825 & 7.714e-16 & 2.314  \\
+				KIT      & 3815  & 7.126e-15 & -5.262 \\
+				KIAA0101 & 9768  & 7.969e-15 & -4.308 \\
+				FLT3     & 2322  & 7.969e-15 & -5.155 \\ \bottomrule
+			\end{tabular}
+		\end{center}
+	\end{latin}
+	\caption{5 ژنی که بیان آن‌ها به طرز معناداری بین گروه سالم و گروه بیماران متفاوت است.}
+	\label{tab:genes-2}
+\end{table}
+
+حالا ژن‌هایی که در بیماران از بقیه بیشتر بیان شده‌اند و همچنین ژن‌هایی که کمتر از بقیه بیان شده‌اند را در جدول \ref{tab:up-down-2} نمایش می‌دهیم.
+
+\begin{table}[h!]
+	\begin{latin}
+		\begin{center}
+			\begin{tabular}{@{}cc@{}}
+				\toprule
+				Most Expressed & Least Expressed \\ \midrule
+				PECR           & MPO             \\
+				DDX58          & KIT            \\
+				CBX7           & KIAA0101        \\
+				STK38          & FLT3           \\
+				NR1D2          & SUCNR1          \\ \bottomrule
+			\end{tabular}
+		\end{center}
+	\end{latin}
+	\caption{5 ژنی که در بیماران بیشتر/کمتر از بقیه بیان شده‌اند.}
+	\label{tab:up-down-2}
 \end{table}
 
 \section{بررسی \lr{pathway} و \lr{gene ontology}}
@@ -106,14 +149,81 @@
 	\label{fig:enrichr}
 \end{figure}
 
+در بخش \lr{pathways} (شکل \ref{fig:enrichr-pathways}) می‌توان پایگاه‌داده‌های \lr{pathway} مختلف را بررسی کرد.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\columnwidth]{figs/enrichr-pathways.jpg}
+	\caption{بخش \lr{pathways} در \lr{enrichr}}
+	\label{fig:enrichr-pathways}
+\end{figure}
 
+به‌عنوان مثال در پایگاه‌داده \lr{Reactome 2022} (شکل \ref{fig:enrichr-pathways-reactome}) تعداد زیادی از ژن‌هایی که میزان بیان بیشتری داشتند مربوط به \lr{pathway} سیستم ایمنی \LTRfootnote{\lr{Immune System}} هستند.
+\begin{figure}[h!]
+	\begin{subfigure}{.59\columnwidth}
+		\centering
+		\includegraphics[width=\columnwidth]{figs/enrichr-pathways-reactome.jpg}
+	\end{subfigure}
+	\begin{subfigure}{.41\columnwidth}
+		\centering
+		\includegraphics[width=\columnwidth]{figs/enrichr-pathways-reactome-tab.jpg}
+	\end{subfigure}
+	\caption{\lr{pathway}های پایگاه‌داده \lr{Reactome}}
+	\label{fig:enrichr-pathways-reactome}
+\end{figure}
+
+و همچنین پایگاه‌داده \lr{KEGG 2021} در شکل \ref{fig:enrichr-pathways-kegg} نمایش داده شده است.
+\begin{figure}[h!]
+	\begin{subfigure}{.53\columnwidth}
+		\centering
+		\includegraphics[width=\columnwidth]{figs/enrichr-pathways-kegg.jpg}
+	\end{subfigure}
+	\begin{subfigure}{.47\columnwidth}
+		\centering
+		\includegraphics[width=\columnwidth]{figs/enrichr-pathways-kegg-tab.jpg}
+	\end{subfigure}
+	\caption{\lr{pathway}های پایگاه‌داده \lr{KEGG}}
+	\label{fig:enrichr-pathways-kegg}
+\end{figure}
+
+در بخش \lr{ontologies} می‌توان \lr{biological processes} (شکل \ref{fig:enrichr-ontology-bp}) و \lr{cellular components} (شکل \ref{fig:enrichr-ontology-cc}) و \lr{molecular functions} (شکل \ref{fig:enrichr-ontology-mf}) را بررسی کرد (شکل \ref{fig:enrichr-ontology}).
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\columnwidth]{figs/enrichr-ontologies.jpg}
+	\caption{بخش \lr{ontologies} در \lr{enrichr}}
+	\label{fig:enrichr-ontology}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\columnwidth]{figs/enrichr-ontologies-bp.jpg}
+	\caption{\lr{biological processes} در بخش \lr{ontologies}}
+	\label{fig:enrichr-ontology-bp}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\columnwidth]{figs/enrichr-ontologies-cc.jpg}
+	\caption{\lr{cellular components} در بخش \lr{ontologies}}
+	\label{fig:enrichr-ontology-cc}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\columnwidth]{figs/enrichr-ontologies-mf.jpg}
+	\caption{\lr{molecular functions} در بخش \lr{ontologies}}
+	\label{fig:enrichr-ontology-mf}
+\end{figure}
+
+\section{جست‌و‌جو در مقالات}
+\subsection*{الف)}
+پس
 
 \clearpage
 
 \begin{thebibliography}{99}
 	\begin{latin}
-		\bibitem{nature-microarray}
-		Nature Defenition Microarray (2014), Nature Education, \url{https://www.nature.com/scitable/definition/microarray-202}
+%		\bibitem{nature-microarray}
+%		Nature Defenition Microarray (2014), Nature Education, \url{https://www.nature.com/scitable/definition/microarray-202}
 		
 %		\bibitem{lamport94
 %		Leslie Lamport (1994) \emph{\LaTeX: a document preparation system}, Addison
