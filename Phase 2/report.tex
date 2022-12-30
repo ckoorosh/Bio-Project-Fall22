@@ -66,11 +66,11 @@
 			\begin{tabular}{@{}cccc@{}}
 				\toprule
 				Gene Symbol & Gene ID & Adj. P-Val & logFC  \\ \midrule
-				MPO         & 4353    & 3.617e-19 & -5.563 \\
-				FLT3        & 2322    & 4.835e-19 & -5.250 \\
-				KIAA0101    & 9768    & 6.308e-19 & -4.559 \\
-				BUB1B       & 701     & 1.664e-18 & -2.756 \\
-				SUCNR1      & 56670   & 1.938e-18 & -2.996 \\ \bottomrule
+				MPO         & 4353    & 3.617e-19 & 5.563 \\
+				FLT3        & 2322    & 4.835e-19 & 5.250 \\
+				KIAA0101    & 9768    & 6.308e-19 & 4.559 \\
+				BUB1B       & 701     & 1.664e-18 & 2.756 \\
+				SUCNR1      & 56670   & 1.938e-18 & 2.996 \\ \bottomrule
 			\end{tabular}
 		\end{center}
 	\end{latin}
@@ -86,7 +86,7 @@
 		\begin{center}
 			\begin{tabular}{@{}cc@{}}
 				\toprule
-				Most Expressed & Least Expressed \\ \midrule
+				Least Expressed & Most Expressed \\ \midrule
 				STK38          & MPO             \\
 				CBX7           & FLT3            \\
 				PLCL2          & KIAA0101        \\
@@ -108,11 +108,11 @@
 			\begin{tabular}{@{}cccc@{}}
 				\toprule
 				Gene Symbol & Gene ID & Adj. P-Val & logFC  \\ \midrule
-				MPO      & 4353  & 7.714e-16 & -5.73  \\
-				PECR     & 55825 & 7.714e-16 & 2.314  \\
-				KIT      & 3815  & 7.126e-15 & -5.262 \\
-				KIAA0101 & 9768  & 7.969e-15 & -4.308 \\
-				FLT3     & 2322  & 7.969e-15 & -5.155 \\ \bottomrule
+				MPO      & 4353  & 7.714e-16 & 5.73  \\
+				PECR     & 55825 & 7.714e-16 & -2.314  \\
+				KIT      & 3815  & 7.126e-15 & 5.262 \\
+				KIAA0101 & 9768  & 7.969e-15 & 4.308 \\
+				FLT3     & 2322  & 7.969e-15 & 5.155 \\ \bottomrule
 			\end{tabular}
 		\end{center}
 	\end{latin}
@@ -127,7 +127,7 @@
 		\begin{center}
 			\begin{tabular}{@{}cc@{}}
 				\toprule
-				Most Expressed & Least Expressed \\ \midrule
+				Least Expressed & Most Expressed \\ \midrule
 				PECR           & MPO             \\
 				DDX58          & KIT            \\
 				CBX7           & KIAA0101        \\
@@ -141,8 +141,8 @@
 \end{table}
 
 \section{بررسی \lr{pathway} و \lr{gene ontology}}
-\subsection{ژن‌هایی که بیشتر بیان شده‌اند}
-با رفتن به سایت \href{https://maayanlab.cloud/Enrichr/}{\lr{enrichr}} و قرار دادن لیست ژن‌های بیشتر بیان‌شده (شکل \ref{fig:enrichr}) آن‌‌ها را بررسی می‌کنیم.
+\subsection{ژن‌هایی که کمتر بیان شده‌اند}
+با رفتن به سایت \href{https://maayanlab.cloud/Enrichr/}{\lr{enrichr}} و قرار دادن لیست ژن‌های کمتر بیان‌شده (شکل \ref{fig:enrichr}) آن‌‌ها را بررسی می‌کنیم.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.5\columnwidth]{figs/enrichr.jpg}
@@ -155,11 +155,11 @@
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.5\columnwidth]{figs/enrichr-pathways.jpg}
-	\caption{بخش \lr{pathways} در \lr{enrichr} برای ژن‌های بیشتر بیان‌شده و تمام نمونه‌ها}
+	\caption{بخش \lr{pathways} در \lr{enrichr} برای ژن‌های کمتر بیان‌شده و تمام نمونه‌ها}
 	\label{fig:enrichr-pathways}
 \end{figure}
 
-به‌عنوان مثال در پایگاه‌داده \lr{Reactome 2022} (شکل \ref{fig:enrichr-pathways-reactome}) تعداد زیادی از ژن‌هایی که میزان بیان بیشتری داشتند مربوط به \lr{pathway} سیستم ایمنی \LTRfootnote{\lr{Immune System}} هستند.
+به‌عنوان مثال در پایگاه‌داده \lr{Reactome 2022} (شکل \ref{fig:enrichr-pathways-reactome}) تعداد زیادی از ژن‌هایی که میزان بیان کمتری داشتند مربوط به \lr{pathway} سیستم ایمنی \LTRfootnote{\lr{Immune System}} هستند.
 \begin{figure}[h!]
 	\begin{subfigure}{.59\columnwidth}
 		\centering
@@ -187,11 +187,31 @@
 	\label{fig:enrichr-pathways-kegg}
 \end{figure}
 
+با مراجعه به سایت \href{https://www.genome.jp}{\lr{KEGG}} و جست‌و‌جوی معنادارترین \lr{pathway} یعنی
+\lr{NF-kappa B signaling pathway}
+تصویر آن را در شکل \ref{fig:kegg-pathway} نمایش می‌دهیم.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\columnwidth]{figs/kegg-pathway.jpg}
+	\caption{شمای \lr{NF-kappa B signaling pathway}}
+	\label{fig:kegg-pathway}
+\end{figure}
+
+و با مراجعه به سایت \href{https://reactome.org}{\lr{reactome}} و جست‌و‌جوی معنادارترین \lr{pathway} یعنی
+\lr{Immune System R-HSA-168256}
+تصویر آن را در شکل \ref{fig:reactome-pathway} نمایش می‌دهیم.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.6\columnwidth]{figs/reactome-pathway.pdf}
+	\caption{شمای \lr{Immune System R-HSA-168256}}
+	\label{fig:reactome-pathway}
+\end{figure}
+
 در بخش \lr{ontologies} می‌توان \lr{biological processes} (شکل \ref{fig:enrichr-ontology-bp}) و \lr{cellular components} (شکل \ref{fig:enrichr-ontology-cc}) و \lr{molecular functions} (شکل \ref{fig:enrichr-ontology-mf}) را بررسی کرد (شکل \ref{fig:enrichr-ontology}).
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.5\columnwidth]{figs/enrichr-ontologies.jpg}
-	\caption{بخش \lr{ontologies} در \lr{enrichr} برای ژن‌های بیشتر بیان‌شده و تمام نمونه‌ها}
+	\caption{بخش \lr{ontologies} در \lr{enrichr} برای ژن‌های کمتر بیان‌شده و تمام نمونه‌ها}
 	\label{fig:enrichr-ontology}
 \end{figure}
 
@@ -221,7 +241,7 @@
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.5\columnwidth]{figs/enrichr-pathways-2.jpg}
-	\caption{بخش \lr{pathways} در \lr{enrichr} برای ژن‌های بیشتر بیان‌شده و نمونه‌های با هم‌بستگی بیشتر}
+	\caption{بخش \lr{pathways} در \lr{enrichr} برای ژن‌های کمتر بیان‌شده و نمونه‌های با هم‌بستگی بیشتر}
 	\label{fig:enrichr-pathways-2}
 \end{figure}
 
@@ -244,19 +264,19 @@
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.5\columnwidth]{figs/enrichr-ontologies-2.jpg}
-	\caption{بخش \lr{ontologies} در \lr{enrichr} برای ژن‌های بیشتر بیان‌شده و نمونه‌های با هم‌بستگی بیشتر}
+	\caption{بخش \lr{ontologies} در \lr{enrichr} برای ژن‌های کمتر بیان‌شده و نمونه‌های با هم‌بستگی بیشتر}
 	\label{fig:enrichr-ontology-2}
 \end{figure}
 
-\subsection{ژن‌هایی که کمتر بیان شده‌اند}
-حالا لیست ژن‌های کمتر بیان‌شده را بررسی می‌کنیم.
+\subsection{ژن‌هایی که بیشتر بیان شده‌اند}
+حالا لیست ژن‌های بیشتر بیان‌شده را بررسی می‌کنیم.
 
 \subsubsection{انتخاب تمام نمونه‌های سالم}
 در بخش \lr{pathways} (شکل \ref{fig:enrichr-pathways-d}) می‌توان پایگاه‌داده‌های \lr{pathway} مختلف را بررسی کرد.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.5\columnwidth]{figs/enrichr-pathways-d.jpg}
-	\caption{بخش \lr{pathways} در \lr{enrichr} برای ژن‌های کمتر بیان‌شده و تمام نمونه‌ها}
+	\caption{بخش \lr{pathways} در \lr{enrichr} برای ژن‌های بیشتر بیان‌شده و تمام نمونه‌ها}
 	\label{fig:enrichr-pathways-d}
 \end{figure}
 
@@ -264,7 +284,7 @@
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.5\columnwidth]{figs/enrichr-ontologies-d-2.jpg}
-	\caption{بخش \lr{ontologies} در \lr{enrichr} برای ژن‌های کمتر بیان‌شده و تمام نمونه‌ها}
+	\caption{بخش \lr{ontologies} در \lr{enrichr} برای ژن‌های بیشتر بیان‌شده و تمام نمونه‌ها}
 	\label{fig:enrichr-ontology-d}
 \end{figure}
 
@@ -273,7 +293,7 @@
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.5\columnwidth]{figs/enrichr-pathways-d-2.jpg}
-	\caption{بخش \lr{pathways} در \lr{enrichr} برای ژن‌های کمتر بیان‌شده و نمونه‌های با هم‌بستگی بیشتر}
+	\caption{بخش \lr{pathways} در \lr{enrichr} برای ژن‌های بیشتر بیان‌شده و نمونه‌های با هم‌بستگی بیشتر}
 	\label{fig:enrichr-pathways-d-2}
 \end{figure}
 
@@ -281,22 +301,64 @@
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.5\columnwidth]{figs/enrichr-ontologies-d-2.jpg}
-	\caption{بخش \lr{ontologies} در \lr{enrichr} برای ژن‌های کمتر بیان‌شده و نمونه‌های با هم‌بستگی بیشتر}
+	\caption{بخش \lr{ontologies} در \lr{enrichr} برای ژن‌های بیشتر بیان‌شده و نمونه‌های با هم‌بستگی بیشتر}
 	\label{fig:enrichr-ontology-d-2}
 \end{figure}
 
 \section{جست‌و‌جو در مقالات}
 \subsection*{الف)}
-پس
+در مقاله \cite{e2f4} و بخش نتیجه‌گیری بیان شده است که ژن \lr{E2F4} (که در پایگاه‌داده \lr{TRANSFAC and JASPAR PWMs} به‌عنوان معنادارترین ژن با بیان زیاد انتخاب شده است) بیش از حد بیان شده است
+\LTRfootnote{\lr{E2F4 is aberrantly overexpressed in AML and is associated with poor prognosis}}
+. 
+در مقاله‌های \cite{irf8, irf8-2} گفته شده که ژن \lr{IRF8} (که در پایگاه‌داده )\lr{ENCODE  and ChEA Consensus TFs from} کمتر بیان شده است
+\LTRfootnote{\lr{We validated the critical role of the transcription factor IRF8 and demonstrated that it modulates the function of the cells by regulating important signaling molecules.}}
+. 
+
+در مقاله \cite{interferon} اشاره شده است که \lr{Interferon Alpha/Beta Signaling R-HSA-909733} در بیماران مبتلا به \lr{AML} به میزان قابل توجهی کم بیان شده است (مطابق شکل \ref{fig:enrichr-pathways-reactome}) 
+\LTRfootnote{\lr{The absence of monocyte and pDC activation by IFNα ex vivo could explain the lack of an in vivo anti-leukemic effect, and the therapeutic effect of IFNα may potentially be enhanced by removing this inherent block of activation in healthy immune subsets in AML patients}}
+.
+
+در مقاله \cite{cell-cycle} نیز اشاره شده که \lr{Cell cycle} در کنترل بیماری موثر است (شکل \ref{fig:enrichr-pathways-d})
+\LTRfootnote{\lr{Cell cycle control in acute myeloid leukemia}}
+.
+
 \subsection*{ب)}
-پس
+در مقاله \cite{irf8} به دارویی اشاره شده است که برای درمان \lr{AML} باید مقدار بیان این ژن را افزایش داد
+\LTRfootnote{\lr{As an inhibitor for the related protein IRF5 was recently described, IRF8 may also be a suitable drug target.}}
+.
+
+داروی \lr{Arsenic trioxide} که یکی از موثرترین داروهای در درمان بیماری \lr{AML} است در \cite{kappa} بیان شده است که \lr{NF-kappa B signaling pathway} از اهداف اصلی این دارو است (شکل \ref{fig:kegg-pathway} و \ref{fig:kappa}).
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\columnwidth]{figs/kappa.jpg}
+	\caption{مشاهده \lr{NF-kappa B signaling pathway} در هدف‌های موثر از داروی \lr{Arsenic trioxide}}
+	\label{fig:kappa}
+\end{figure}
 
 \clearpage
 
 \begin{thebibliography}{99}
-	\begin{latin}
-%		\bibitem{nature-microarray}
-%		Nature Defenition Microarray (2014), Nature Education, \url{https://www.nature.com/scitable/definition/microarray-202}
+	\begin{latin}		
+		\bibitem{e2f4}
+		Feng, Y, Li, L, Du, Y, Peng, X, Chen, F. (2020) \emph{E2F4 functions as a tumour suppressor in acute myeloid leukaemia via inhibition of the MAPK signalling pathway by binding to EZH2}, Cell Mol Med.
+		
+		\bibitem{interferon}
+		Forthun, R.B., Hellesøy, M., Sulen, A. et al. (2019) \emph{Modulation of phospho-proteins by interferon-alpha and valproic acid in acute myeloid leukemia}, Cancer Res Clin Oncol.
+		
+		\bibitem{cell-cycle}
+		Schnerch D, Yalcintepe J, Schmidts A, et al. (2012) \emph{Cell cycle control in acute myeloid leukemia}, Am J Cancer Res.
+		
+		\bibitem{irf8-2}
+		Sharma A, Yun H, Jyotsana N, Chaturvedi A, Schwarzer A, Yung E, Lai CK, Kuchenbauer F, Argiropoulos B, Görlich K, Ganser A, Humphries RK, Heuser M. (2015) \emph{Constitutive IRF8 expression inhibits AML by activation of repressed immune response signaling. Leukemia}, Epub.
+		
+		\bibitem{irf8}
+		Liss F, Frech M, Wang Y, et al. (2021) \emph{IRF8 Is an AML-Specific Susceptibility Factor That Regulates Signaling Pathways and Proliferation of AML Cells}, Cancers (Basel).
+		
+		\bibitem{kappa}
+		Trisenox. \emph{Arsenic trioxide}, Drug Bank \url{https://go.drugbank.com/drugs/DB01169}.
+		
+		
 		
 %		\bibitem{lamport94
 %		Leslie Lamport (1994) \emph{\LaTeX: a document preparation system}, Addison
