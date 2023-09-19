@@ -3,7 +3,7 @@
   <h1 align="center">Microarray Data Analysis</h3>
 
   <p align="center">
-    Analyzing microarray expression data of the AML and normal cells
+    Microarray Expression Data Analysis for AML and Normal Cells
     <br/>
     <br/>
   </p>
