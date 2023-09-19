@@ -1,6 +1,6 @@
 <br/>
 <p align="center">
-  <h3 align="center">Microarray Data Analysis</h3>
+  <h1 align="center">Microarray Data Analysis</h3>
 
   <p align="center">
     Analyzing microarray expression data of the AML and normal cells
