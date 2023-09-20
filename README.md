@@ -16,9 +16,9 @@ This is the project for the "Introduction to Bioinformatics" course at Sharif Un
 
 ## Phase 1
 
-In this phase we analyze the given data and plot the results. The data is downloaded using the [GEOquery](https://bioconductor.org/packages/release/bioc/html/GEOquery.html) package in [R](https://www.r-project.org/). The data is then normalized using the [limma](https://bioconductor.org/packages/release/bioc/html/limma.html) package in [R](https://www.r-project.org/). It is then analyzed using the [umap](https://cran.r-project.org/web/packages/umap/vignettes/umap.html) package in [R](https://www.r-project.org/). The results are then visualized using [ggplot2](https://ggplot2.tidyverse.org/) and [corrplot](https://cran.r-project.org/web/packages/corrplot/index.html). 
+In this phase, we analyze the given data and plot the results. The data is downloaded using the [GEOquery](https://bioconductor.org/packages/release/bioc/html/GEOquery.html) package in [R](https://www.r-project.org/). The data is then normalized using the [limma](https://bioconductor.org/packages/release/bioc/html/limma.html) package in [R](https://www.r-project.org/). It is then analyzed using the [umap](https://cran.r-project.org/web/packages/umap/vignettes/umap.html) package in [R](https://www.r-project.org/). The results are then visualized using [ggplot2](https://ggplot2.tidyverse.org/) and [corrplot](https://cran.r-project.org/web/packages/corrplot/index.html). 
 
-Then, we used dimentioanlity reduction techniques such as [PCA](https://en.wikipedia.org/wiki/Principal_component_analysis), [TSNE](https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding), and [MDS](https://en.wikipedia.org/wiki/Multidimensional_scaling) to visualize the data. The results are shown below:
+Then, we used dimensionality reduction techniques such as [PCA](https://en.wikipedia.org/wiki/Principal_component_analysis), [TSNE](https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding), and [MDS](https://en.wikipedia.org/wiki/Multidimensional_scaling) to visualize the data. The results are shown below:
 
 <table>
   <tr align="center">
@@ -28,8 +28,8 @@ Then, we used dimentioanlity reduction techniques such as [PCA](https://en.wikip
   </tr>
   <tr>
     <td><img src="Phase%201/figs/pca6.png" width=300 height=300></td>
-    <td><img src="Phase%201/figs/pca6.png" width=300 height=300></td>
-    <td><img src="Phase%201/figs/pca6.png" width=300 height=300></td>
+    <td><img src="Phase%201/figs/tsnep5.png" width=300 height=300></td>
+    <td><img src="Phase%201/figs/mds.png" width=300 height=300></td>
   </tr>
  </table>
 
@@ -43,9 +43,9 @@ The final report (in persian) is presented in the [documentation](/Phase%201/rep
 
 ## Phase 2
 
-In this phase we used the [limma](https://bioconductor.org/packages/release/bioc/html/limma.html) package in [R](https://www.r-project.org/) to find the differentially expressed genes (DEGs) between the AML and normal cells. We then used the [Enricher](https://maayanlab.cloud/Enrichr/) to find the enriched pathways and gene ontology and in the DEGs.
+In this phase, we used the [limma](https://bioconductor.org/packages/release/bioc/html/limma.html) package in [R](https://www.r-project.org/) to find the differentially expressed genes (DEGs) between the AML and normal cells. We then used the [Enricher](https://maayanlab.cloud/Enrichr/) to find the enriched pathways and gene ontology in the DEGs.
 
-Finally, we investigated different research papers to find the most important pathways and genes in the AML cancer.
+Finally, we investigated different research papers to find the most important pathways and genes in AML cancer.
 
 ### Report
 
